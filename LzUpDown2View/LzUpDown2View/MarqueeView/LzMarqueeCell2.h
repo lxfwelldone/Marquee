@@ -8,19 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "Person.h"
-#import "XDTopDownMarqueeMV.h"
+#import "LzMarqueeMV.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
-@protocol XDTopDownMarqueeCellDelegate <NSObject>
+@protocol LzMarqueeCell2Delegate <NSObject>
 
-- (void)toSubmitFinalPrice:(Person *)person;
+- (void)returnFinalModel:(Person *)model;
 
 @end
 
-@interface XDTopDownMarqueeCell : UIView
+/**
+ * 这是marquee中显示的cell，包括了2个数据模型。
+ */
+@interface LzMarqueeCell2 : UIView
 
-@property (nonatomic, weak) id <XDTopDownMarqueeCellDelegate> delegate;
+@property (nonatomic, weak) id <LzMarqueeCell2Delegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame;
 - (void)model1:(Person *)model1 model2:(Person *)model2;

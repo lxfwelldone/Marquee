@@ -6,13 +6,13 @@
 //  Copyright © 2019年 lxf. All rights reserved.
 //
 
-#import "XDTopDownMarquee.h"
+#import "LzMarquee2.h"
 
 
-@interface XDTopDownMarquee()<XDTopDownMarqueeCellDelegate>
+@interface LzMarquee2()<LzMarqueeCell2Delegate>
 
-@property (nonatomic, strong) XDTopDownMarqueeCell * cellOne;
-@property (nonatomic, strong) XDTopDownMarqueeCell * cellTwo;
+@property (nonatomic, strong) LzMarqueeCell2 * cellOne;
+@property (nonatomic, strong) LzMarqueeCell2 * cellTwo;
 @property (nonatomic, assign) NSInteger dataIndex; //用来表示数据源取的位置
 @property (nonatomic, assign) Boolean isWork;
 @property (strong, nonatomic) NSTimer *timer; //循环滚动
@@ -22,12 +22,12 @@
 @property (nonatomic, assign) Boolean showCellOne;
 @end
 
-@implementation XDTopDownMarquee
+@implementation LzMarquee2
 
-//从xib加载
+//从xib加载,请自行实现
 - (void)awakeFromNib{
     [super awakeFromNib];
-    [self initVaues];
+//    [self initVaues];
 }
 //代码初始化
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -125,10 +125,10 @@
     [self layoutIfNeeded];
 }
 
-//执行代理事件
-- (void)toSubmitFinalPrice:(Person *)person{
+#pragma mark - 代理实现
+- (void)toSubmitFinalPrice:(Person *)model{
     if (self.backModelBlock) {
-        self.backModelBlock(person);
+        self.backModelBlock(model);
     }
 }
 
@@ -144,17 +144,17 @@
 
 
 #pragma mark - 懒加载模块
-- (XDTopDownMarqueeCell *)cellOne{
+- (LzMarqueeCell2 *)cellOne{
     if (!_cellOne) {
-        _cellOne = [[XDTopDownMarqueeCell alloc] initWithFrame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        _cellOne = [[LzMarqueeCell2 alloc] initWithFrame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         _cellOne.delegate = self;
     }
     return _cellOne;
 }
 
-- (XDTopDownMarqueeCell *)cellTwo{
+- (LzMarqueeCell2 *)cellTwo{
     if (!_cellTwo) {
-        _cellTwo = [[XDTopDownMarqueeCell alloc] initWithFrame:CGRectMake(0, self.frame.size.height, self.frame.size.width, self.frame.size.height)];
+        _cellTwo = [[LzMarqueeCell2 alloc] initWithFrame:CGRectMake(0, self.frame.size.height, self.frame.size.width, self.frame.size.height)];
         _cellTwo.delegate = self;
     }
     return _cellTwo;

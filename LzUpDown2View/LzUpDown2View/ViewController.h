@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Person.h"
-#import "XDTopDownMarquee.h"
+#import "LzMarquee2.h"
 @interface ViewController : UIViewController
 
 

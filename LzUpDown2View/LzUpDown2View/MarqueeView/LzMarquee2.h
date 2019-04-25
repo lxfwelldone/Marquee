@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Person.h"
-#import "XDTopDownMarqueeCell.h"
+#import "LzMarqueeCell2.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XDTopDownMarquee : UIView
+@interface LzMarquee2 : UIView
 /**
  * timer的间隔时间
  */
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 滚动时间
  */
 @property (nonatomic, assign) NSTimeInterval duration;
-@property (nonatomic, copy) void(^backModelBlock)(Person *p);
+@property (nonatomic, copy) void(^backModelBlock)(Person * model);
 - (instancetype)initWithFrame:(CGRect)frame;
 - (void)setData:(NSMutableArray *)marrData;
 - (void)startTimer;

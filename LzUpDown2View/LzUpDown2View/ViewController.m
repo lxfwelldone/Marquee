@@ -9,9 +9,12 @@
 #import "ViewController.h"
 #import "MyController.h"
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet XDTopDownMarquee *scrollView;
+
+
 @property (nonatomic, strong) UIButton * btnChange;
-@property (nonatomic, strong) XDTopDownMarquee * marquee;
+@property (nonatomic, strong) LzMarquee2 * marquee;
+
+
 @end
 
 @implementation ViewController
@@ -19,15 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//
-//    [self.scrollView setMarrData:[self getPersonsCount:8]];
-//    [self.scrollView startTimer];
-    
-    _marquee = [[XDTopDownMarquee alloc] initWithFrame:CGRectMake(0, 100, 414, 120)];
+    _marquee = [[LzMarquee2 alloc] initWithFrame:CGRectMake(0, 100, 414, 120)];
     self.btnChange.frame = CGRectMake(20, 250, 80, 40);
     
     typeof(self) weakSelf = self;
-    _marquee.backModelBlock = ^(Person * _Nonnull p) {
+
+    _marquee.backModelBlock = ^(NSObject * _Nonnull model) {
+        Person *p = (Person *)model;
         NSLog(@"点击了---姓名：%@，地址：%@", p.name, p.address);
         
         MyController * vc = [[MyController alloc] initWithNibName:@"MyController" bundle:nil];

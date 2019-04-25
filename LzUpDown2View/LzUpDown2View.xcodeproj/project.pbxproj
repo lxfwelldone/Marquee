@@ -9,22 +9,25 @@
 /* Begin PBXBuildFile section */
 		4C105170226AB27E001F59CD /* MyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C10516E226AB27E001F59CD /* MyController.m */; };
 		4C105171226AB27E001F59CD /* MyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C10516F226AB27E001F59CD /* MyController.xib */; };
+		4C6BCD0A22717A0F00976D42 /* LzMarquee1.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6BCD0922717A0F00976D42 /* LzMarquee1.m */; };
 		4CF367D12269A2D100CCF7FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367D02269A2D100CCF7FB /* AppDelegate.m */; };
 		4CF367D42269A2D100CCF7FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367D32269A2D100CCF7FB /* ViewController.m */; };
 		4CF367D72269A2D100CCF7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF367D52269A2D100CCF7FB /* Main.storyboard */; };
 		4CF367D92269A2D300CCF7FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF367D82269A2D300CCF7FB /* Assets.xcassets */; };
 		4CF367DC2269A2D300CCF7FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF367DA2269A2D300CCF7FB /* LaunchScreen.storyboard */; };
 		4CF367DF2269A2D300CCF7FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367DE2269A2D300CCF7FB /* main.m */; };
-		4CF367E72269A30900CCF7FB /* XDTopDownMarquee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367E62269A30900CCF7FB /* XDTopDownMarquee.m */; };
+		4CF367E72269A30900CCF7FB /* LzMarquee2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367E62269A30900CCF7FB /* LzMarquee2.m */; };
 		4CF367F22269BE0C00CCF7FB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367F12269BE0C00CCF7FB /* Person.m */; };
-		4CF367F52269E01700CCF7FB /* XDTopDownMarqueeMV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367F42269E01700CCF7FB /* XDTopDownMarqueeMV.m */; };
-		4CF367F82269E4B800CCF7FB /* XDTopDownMarqueeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367F72269E4B800CCF7FB /* XDTopDownMarqueeCell.m */; };
+		4CF367F52269E01700CCF7FB /* LzMarqueeMV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367F42269E01700CCF7FB /* LzMarqueeMV.m */; };
+		4CF367F82269E4B800CCF7FB /* LzMarqueeCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367F72269E4B800CCF7FB /* LzMarqueeCell2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C10516D226AB27E001F59CD /* MyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyController.h; sourceTree = "<group>"; };
 		4C10516E226AB27E001F59CD /* MyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyController.m; sourceTree = "<group>"; };
 		4C10516F226AB27E001F59CD /* MyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyController.xib; sourceTree = "<group>"; };
+		4C6BCD0822717A0F00976D42 /* LzMarquee1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzMarquee1.h; sourceTree = "<group>"; };
+		4C6BCD0922717A0F00976D42 /* LzMarquee1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LzMarquee1.m; sourceTree = "<group>"; };
 		4CF367CC2269A2D100CCF7FB /* LzUpDown2View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LzUpDown2View.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF367CF2269A2D100CCF7FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CF367D02269A2D100CCF7FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,14 +38,14 @@
 		4CF367DB2269A2D300CCF7FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CF367DD2269A2D300CCF7FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CF367DE2269A2D300CCF7FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4CF367E52269A30900CCF7FB /* XDTopDownMarquee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDTopDownMarquee.h; sourceTree = "<group>"; };
-		4CF367E62269A30900CCF7FB /* XDTopDownMarquee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDTopDownMarquee.m; sourceTree = "<group>"; };
+		4CF367E52269A30900CCF7FB /* LzMarquee2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzMarquee2.h; sourceTree = "<group>"; };
+		4CF367E62269A30900CCF7FB /* LzMarquee2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LzMarquee2.m; sourceTree = "<group>"; };
 		4CF367F02269BE0C00CCF7FB /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		4CF367F12269BE0C00CCF7FB /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		4CF367F32269E01700CCF7FB /* XDTopDownMarqueeMV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDTopDownMarqueeMV.h; sourceTree = "<group>"; };
-		4CF367F42269E01700CCF7FB /* XDTopDownMarqueeMV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDTopDownMarqueeMV.m; sourceTree = "<group>"; };
-		4CF367F62269E4B800CCF7FB /* XDTopDownMarqueeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDTopDownMarqueeCell.h; sourceTree = "<group>"; };
-		4CF367F72269E4B800CCF7FB /* XDTopDownMarqueeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XDTopDownMarqueeCell.m; sourceTree = "<group>"; };
+		4CF367F32269E01700CCF7FB /* LzMarqueeMV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzMarqueeMV.h; sourceTree = "<group>"; };
+		4CF367F42269E01700CCF7FB /* LzMarqueeMV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LzMarqueeMV.m; sourceTree = "<group>"; };
+		4CF367F62269E4B800CCF7FB /* LzMarqueeCell2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzMarqueeCell2.h; sourceTree = "<group>"; };
+		4CF367F72269E4B800CCF7FB /* LzMarqueeCell2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LzMarqueeCell2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C6BCD06227175C500976D42 /* MarqueeView */ = {
+			isa = PBXGroup;
+			children = (
+				4C6BCD07227175EE00976D42 /* ModelView */,
+				4CF367E52269A30900CCF7FB /* LzMarquee2.h */,
+				4CF367E62269A30900CCF7FB /* LzMarquee2.m */,
+				4C6BCD0822717A0F00976D42 /* LzMarquee1.h */,
+				4C6BCD0922717A0F00976D42 /* LzMarquee1.m */,
+				4CF367F62269E4B800CCF7FB /* LzMarqueeCell2.h */,
+				4CF367F72269E4B800CCF7FB /* LzMarqueeCell2.m */,
+			);
+			path = MarqueeView;
+			sourceTree = "<group>";
+		};
+		4C6BCD07227175EE00976D42 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				4CF367F32269E01700CCF7FB /* LzMarqueeMV.h */,
+				4CF367F42269E01700CCF7FB /* LzMarqueeMV.m */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
 		4CF367C32269A2D100CCF7FB = {
 			isa = PBXGroup;
 			children = (
@@ -84,12 +110,7 @@
 				4C10516F226AB27E001F59CD /* MyController.xib */,
 				4CF367F02269BE0C00CCF7FB /* Person.h */,
 				4CF367F12269BE0C00CCF7FB /* Person.m */,
-				4CF367E52269A30900CCF7FB /* XDTopDownMarquee.h */,
-				4CF367E62269A30900CCF7FB /* XDTopDownMarquee.m */,
-				4CF367F32269E01700CCF7FB /* XDTopDownMarqueeMV.h */,
-				4CF367F42269E01700CCF7FB /* XDTopDownMarqueeMV.m */,
-				4CF367F62269E4B800CCF7FB /* XDTopDownMarqueeCell.h */,
-				4CF367F72269E4B800CCF7FB /* XDTopDownMarqueeCell.m */,
+				4C6BCD06227175C500976D42 /* MarqueeView */,
 				4CF367D52269A2D100CCF7FB /* Main.storyboard */,
 				4CF367D82269A2D300CCF7FB /* Assets.xcassets */,
 				4CF367DA2269A2D300CCF7FB /* LaunchScreen.storyboard */,
@@ -171,12 +192,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF367F22269BE0C00CCF7FB /* Person.m in Sources */,
-				4CF367F52269E01700CCF7FB /* XDTopDownMarqueeMV.m in Sources */,
+				4CF367F52269E01700CCF7FB /* LzMarqueeMV.m in Sources */,
 				4CF367D42269A2D100CCF7FB /* ViewController.m in Sources */,
 				4C105170226AB27E001F59CD /* MyController.m in Sources */,
 				4CF367DF2269A2D300CCF7FB /* main.m in Sources */,
-				4CF367E72269A30900CCF7FB /* XDTopDownMarquee.m in Sources */,
-				4CF367F82269E4B800CCF7FB /* XDTopDownMarqueeCell.m in Sources */,
+				4CF367E72269A30900CCF7FB /* LzMarquee2.m in Sources */,
+				4CF367F82269E4B800CCF7FB /* LzMarqueeCell2.m in Sources */,
+				4C6BCD0A22717A0F00976D42 /* LzMarquee1.m in Sources */,
 				4CF367D12269A2D100CCF7FB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

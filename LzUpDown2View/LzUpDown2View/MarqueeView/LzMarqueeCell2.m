@@ -6,22 +6,29 @@
 //  Copyright © 2019年 lxf. All rights reserved.
 //
 
-#import "XDTopDownMarqueeCell.h"
+#import "LzMarqueeCell2.h"
 
-@interface XDTopDownMarqueeCell()<XDTopDownMarqueeMVDelegate>
+@interface LzMarqueeCell2()<LzMarqueeMVDelegate>
 
-@property (nonatomic, strong) XDTopDownMarqueeMV *cellOne;
-@property (nonatomic, strong) XDTopDownMarqueeMV *cellTwo;
+@property (nonatomic, strong) LzMarqueeMV *cellOne;
+@property (nonatomic, strong) LzMarqueeMV *cellTwo;
 @property (nonatomic, strong) UIView * viewLine;
 @end
 
-@implementation XDTopDownMarqueeCell
+@implementation LzMarqueeCell2
 
+//使用xib布局 请自行实现
+- (void)awakeFromNib{
+    [super awakeFromNib];
+//    这里实现xib写法
+}
+
+//使用frame
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        _cellOne = [[XDTopDownMarqueeMV alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height/2)];
+        _cellOne = [[LzMarqueeMV alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height/2)];
         _cellOne.delegate = self;
-        _cellTwo = [[XDTopDownMarqueeMV alloc] initWithFrame:CGRectMake(0, frame.size.height/2.0, frame.size.width, frame.size.height/2)];
+        _cellTwo = [[LzMarqueeMV alloc] initWithFrame:CGRectMake(0, frame.size.height/2.0, frame.size.width, frame.size.height/2)];
         _cellTwo.delegate = self;
         _viewLine = [[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height/2.0, frame.size.width, 1)];
         _viewLine.backgroundColor = UIColor.lightGrayColor;
@@ -34,16 +41,16 @@
     return self;
 }
 
-
+//给MV传值
 - (void)model1:(Person *)model1 model2:(Person *)model2{
     [_cellOne configModel:model1];
     [_cellTwo configModel:model2];
 }
 
-
-- (void)toSubmitPrice:(Person *)person{
-    if (self.delegate && [self.delegate respondsToSelector:@selector(toSubmitFinalPrice:)]) {
-        [self.delegate toSubmitFinalPrice:person];
+//实现代理方法
+- (void)returnModel:(Person *)model{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(returnFinalModel:)]) {
+        [self.delegate returnFinalModel:model];
     }
 }
 

@@ -6,10 +6,10 @@
 //  Copyright © 2019年 lxf. All rights reserved.
 //
 
-#import "XDTopDownMarqueeMV.h"
+#import "LzMarqueeMV.h"
 
 
-@interface XDTopDownMarqueeMV()<UIGestureRecognizerDelegate>
+@interface LzMarqueeMV()<UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) UIImageView *imgLogo;
 @property (strong, nonatomic) UIImageView *imgAddress;
@@ -22,16 +22,21 @@
 @end
 
 
-@implementation XDTopDownMarqueeMV
+@implementation LzMarqueeMV
 
+//使用xib方式请自行实现
+- (void)awakeFromNib{
+    [super awakeFromNib];
 
+}
+
+//使用frame构造方法
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         self.hidden = YES;
         [self initViews];
         [self layout:frame];
     }
-    
     return self;
 }
 
@@ -54,15 +59,35 @@
 - (void)configModel:(Person *)model{
     if (model) {
         self.model = model;
-        self.lblName.text = model.name;
-        self.lblAddress.text = model.address;
         self.hidden = NO;
+        [self displayData];
         [self addGestureRecognizer:self.tap];
-    } else {
+    }
+    else{
         self.hidden = YES;
         [self removeGestureRecognizer:_tap];
     }
 }
+
+//显示数据
+- (void)displayData{
+    self.lblName.text = self.model.name;
+    self.lblAddress.text = self.model.address;
+}
+
+
+//点击自身
+- (void)clickOnMV{
+//    方式一：使用delegate 反向传递点击的model
+    if (self.model && self.delegate && [self.delegate respondsToSelector:@selector(returnModel:)]) {
+        [self.delegate returnModel:self.model];
+    }
+//    方式二：使用block 反向传递点击的model
+    if (self.clickOnModelBlock) {
+        self.clickOnModelBlock(self.model);
+    }
+}
+
 
 //UIGestureRecognizerDelegate 间父视图的手势传递到子视图，如果有button，需要设置enable=NO
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
@@ -73,7 +98,7 @@
 //给self添加单击事件
 - (UITapGestureRecognizer *)tap{
     if (!_tap) {
-        _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickSubmitButton)];
+        _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickOnMV)];
     }
     return _tap;
 }
@@ -123,12 +148,6 @@
         _btnPrice.titleLabel.font = [UIFont systemFontOfSize:13];
     }
     return _btnPrice;
-}
-
-- (void)clickSubmitButton{
-    if (self.model && self.delegate && [self.delegate respondsToSelector:@selector(toSubmitPrice:)]) {
-        [self.delegate toSubmitPrice:self.model];
-    }
 }
 
 

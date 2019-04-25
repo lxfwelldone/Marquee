@@ -17,28 +17,10 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKG-2g-30A" customClass="XDTopDownMarquee">
-                                <rect key="frame" x="0.0" y="273.5" width="375" height="120"/>
-                                <color key="backgroundColor" red="1" green="0.4769960634" blue="0.3146186272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="fSu-4X-sxC"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="EKG-2g-30A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1Cl-0n-hxc"/>
-                            <constraint firstItem="EKG-2g-30A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Ms-84-rI1"/>
-                            <constraint firstItem="EKG-2g-30A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Udc-pb-Tnb"/>
-                            <constraint firstItem="EKG-2g-30A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yle-iL-P9W"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="aAf-qI-MHL"/>
-                    <connections>
-                        <outlet property="scrollView" destination="EKG-2g-30A" id="PDG-Kd-v67"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
