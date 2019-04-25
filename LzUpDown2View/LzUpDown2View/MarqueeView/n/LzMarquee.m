@@ -1,14 +1,14 @@
 //
-//  LzMarquee1.m
+//  LzMarquee.m
 //  LzUpDown2View
 //
 //  Created by mc on 2019/4/25.
 //  Copyright © 2019年 lxf. All rights reserved.
 //
 
-#import "LzMarquee1.h"
+#import "LzMarquee.h"
 
-@implementation LzMarquee1
+@implementation LzMarquee
 
 /*
 // Only override drawRect: if you perform custom drawing.

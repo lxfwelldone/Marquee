@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Person.h"
 #import "LzMarqueeMV.h"
-NS_ASSUME_NONNULL_BEGIN
-
 
 @protocol LzMarqueeCell2Delegate <NSObject>
 
@@ -29,5 +27,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)model1:(Person *)model1 model2:(Person *)model2;
 
 @end
-
-NS_ASSUME_NONNULL_END

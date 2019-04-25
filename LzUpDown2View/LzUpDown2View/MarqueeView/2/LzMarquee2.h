@@ -10,7 +10,6 @@
 #import "Person.h"
 #import "LzMarqueeCell2.h"
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface LzMarquee2 : UIView
 /**
@@ -29,4 +28,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
+

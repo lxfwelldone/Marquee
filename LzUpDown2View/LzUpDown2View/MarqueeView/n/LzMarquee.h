@@ -1,5 +1,5 @@
 //
-//  LzMarquee1.h
+//  LzMarquee.h
 //  LzUpDown2View
 //
 //  Created by mc on 2019/4/25.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LzMarquee1 : UIView
+@interface LzMarquee : UITableView
 
 @end
 
