@@ -7,12 +7,17 @@
 //
 
 #import "ViewController.h"
-#import "MyController.h"
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *lblCode1;
+@property (weak, nonatomic) IBOutlet UILabel *lblCode2;
 
-@property (nonatomic, strong) UIButton * btnChange;
-@property (nonatomic, strong) LzMarquee2 * marquee;
+@property (weak, nonatomic) IBOutlet UILabel *lblXib1;
+@property (weak, nonatomic) IBOutlet UILabel *lblXib2;
+
+
+@property (nonatomic, strong) LzMarquee1 * marquee1;
+@property (nonatomic, strong) LzMarquee2 * marquee2;
 
 
 @end
@@ -22,38 +27,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _marquee = [[LzMarquee2 alloc] initWithFrame:CGRectMake(0, 100, 414, 120)];
-    self.btnChange.frame = CGRectMake(20, 250, 80, 40);
-    
+    [self addCodeMarquee1];
+    [self addCodeMarquee2];
+    [self addLzMarquee];
+}
+
+
+- (void)addLzMarquee{
+    LzMarquee * marquee = [[LzMarquee alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.lblXib1.frame), self.view.frame.size.width, 0) datas:[self getPersonsCount:12] scrollCellCount:3];
+    marquee.timerNumber = 2;
+    [self.view addSubview:marquee];
+    [marquee startTimer];
+}
+
+- (void)addCodeMarquee1{
+    _marquee1 = [[LzMarquee1 alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.lblCode1.frame), self.view.frame.size.width, 60)];
+    _marquee1.duration = 1;
+    _marquee1.timerNumber = 1;
     typeof(self) weakSelf = self;
-
-    _marquee.backModelBlock = ^(NSObject * _Nonnull model) {
+    _marquee1.backModelBlock = ^(NSObject * _Nonnull model) {
         Person *p = (Person *)model;
-        NSLog(@"点击了---姓名：%@，地址：%@", p.name, p.address);
-        
-        MyController * vc = [[MyController alloc] initWithNibName:@"MyController" bundle:nil];
-        [weakSelf.navigationController pushViewController:vc animated:YES];
+        NSString *message = [NSString stringWithFormat:@"姓名：%@, 地址：%@", p.name, p.address];
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"点击结果" message:message preferredStyle:UIAlertControllerStyleAlert];
+        [weakSelf presentViewController:alert animated:YES completion:nil];
     };
-    [_marquee setData:[self getPersonsCount:3]];
-    [self.view addSubview:_marquee];
-    [self.view addSubview:_btnChange];
+    [_marquee1 setData:[self getPersonsCount:10]];
+    [self.view addSubview:_marquee1];
+    
 }
 
 
-- (void)changeModels{
-    [_marquee setData:[self getPersonsCount:4]];
+- (void)addCodeMarquee2{
+    _marquee2 = [[LzMarquee2 alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.lblCode2.frame), self.view.frame.size.width, 120)];
+    typeof(self) weakSelf = self;
+    _marquee2.backModelBlock = ^(NSObject * _Nonnull model) {
+        Person *p = (Person *)model;
+        NSString *message = [NSString stringWithFormat:@"姓名：%@, 地址：%@", p.name, p.address];
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"点击结果" message:message preferredStyle:UIAlertControllerStyleAlert];
+        [weakSelf presentViewController:alert animated:YES completion:nil];
+    };
+    [_marquee2 setData:[self getPersonsCount:8]];
+    [self.view addSubview:_marquee2];
 }
 
-
-- (UIButton *)btnChange {
-    if (!_btnChange) {
-        _btnChange = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_btnChange setTitle:@"切换数据源" forState:UIControlStateNormal];
-        [_btnChange setTitleColor:UIColor.redColor forState:UIControlStateNormal];
-        [_btnChange addTarget:self action:@selector(changeModels) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _btnChange;
-}
 
 
 - (NSMutableArray *)getPersonsCount:(NSInteger)doubleCount{

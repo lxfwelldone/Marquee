@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Person.h"
-NS_ASSUME_NONNULL_BEGIN
+
 
 //协议实现返回点击model
 @protocol LzMarqueeMVDelegate <NSObject>
@@ -29,4 +29,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END

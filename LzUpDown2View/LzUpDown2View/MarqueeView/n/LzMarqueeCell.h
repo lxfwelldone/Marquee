@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LzMarqueeCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+
 @end
 
 NS_ASSUME_NONNULL_END

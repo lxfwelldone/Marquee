@@ -20,6 +20,10 @@
 		4CF367F22269BE0C00CCF7FB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367F12269BE0C00CCF7FB /* Person.m */; };
 		4CF367F52269E01700CCF7FB /* LzMarqueeMV.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367F42269E01700CCF7FB /* LzMarqueeMV.m */; };
 		4CF367F82269E4B800CCF7FB /* LzMarqueeCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF367F72269E4B800CCF7FB /* LzMarqueeCell2.m */; };
+		4CFD700C2271E1C400E1F298 /* noti.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CFD700B2271E1C400E1F298 /* noti.jpg */; };
+		4CFD70122271F8AC00E1F298 /* LzMarquee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD70112271F8AC00E1F298 /* LzMarquee.m */; };
+		4CFD70192271FF4000E1F298 /* LzMarqueeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD70172271FF4000E1F298 /* LzMarqueeCell.m */; };
+		4CFD701A2271FF4000E1F298 /* LzMarqueeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CFD70182271FF4000E1F298 /* LzMarqueeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,12 @@
 		4CF367F42269E01700CCF7FB /* LzMarqueeMV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LzMarqueeMV.m; sourceTree = "<group>"; };
 		4CF367F62269E4B800CCF7FB /* LzMarqueeCell2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzMarqueeCell2.h; sourceTree = "<group>"; };
 		4CF367F72269E4B800CCF7FB /* LzMarqueeCell2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LzMarqueeCell2.m; sourceTree = "<group>"; };
+		4CFD700B2271E1C400E1F298 /* noti.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noti.jpg; sourceTree = "<group>"; };
+		4CFD70102271F8AC00E1F298 /* LzMarquee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzMarquee.h; sourceTree = "<group>"; };
+		4CFD70112271F8AC00E1F298 /* LzMarquee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LzMarquee.m; sourceTree = "<group>"; };
+		4CFD70162271FF4000E1F298 /* LzMarqueeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzMarqueeCell.h; sourceTree = "<group>"; };
+		4CFD70172271FF4000E1F298 /* LzMarqueeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LzMarqueeCell.m; sourceTree = "<group>"; };
+		4CFD70182271FF4000E1F298 /* LzMarqueeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LzMarqueeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +72,11 @@
 		4C6BCD06227175C500976D42 /* MarqueeView */ = {
 			isa = PBXGroup;
 			children = (
+				4CFD700B2271E1C400E1F298 /* noti.jpg */,
+				4CFD700A2271E16A00E1F298 /* n */,
+				4CFD70092271E16400E1F298 /* 2 */,
+				4CFD70082271E15A00E1F298 /* 1 */,
 				4C6BCD07227175EE00976D42 /* ModelView */,
-				4CF367E52269A30900CCF7FB /* LzMarquee2.h */,
-				4CF367E62269A30900CCF7FB /* LzMarquee2.m */,
-				4C6BCD0822717A0F00976D42 /* LzMarquee1.h */,
-				4C6BCD0922717A0F00976D42 /* LzMarquee1.m */,
-				4CF367F62269E4B800CCF7FB /* LzMarqueeCell2.h */,
-				4CF367F72269E4B800CCF7FB /* LzMarqueeCell2.m */,
 			);
 			path = MarqueeView;
 			sourceTree = "<group>";
@@ -118,6 +126,38 @@
 				4CF367DE2269A2D300CCF7FB /* main.m */,
 			);
 			path = LzUpDown2View;
+			sourceTree = "<group>";
+		};
+		4CFD70082271E15A00E1F298 /* 1 */ = {
+			isa = PBXGroup;
+			children = (
+				4C6BCD0822717A0F00976D42 /* LzMarquee1.h */,
+				4C6BCD0922717A0F00976D42 /* LzMarquee1.m */,
+			);
+			path = 1;
+			sourceTree = "<group>";
+		};
+		4CFD70092271E16400E1F298 /* 2 */ = {
+			isa = PBXGroup;
+			children = (
+				4CF367E52269A30900CCF7FB /* LzMarquee2.h */,
+				4CF367E62269A30900CCF7FB /* LzMarquee2.m */,
+				4CF367F62269E4B800CCF7FB /* LzMarqueeCell2.h */,
+				4CF367F72269E4B800CCF7FB /* LzMarqueeCell2.m */,
+			);
+			path = 2;
+			sourceTree = "<group>";
+		};
+		4CFD700A2271E16A00E1F298 /* n */ = {
+			isa = PBXGroup;
+			children = (
+				4CFD70102271F8AC00E1F298 /* LzMarquee.h */,
+				4CFD70112271F8AC00E1F298 /* LzMarquee.m */,
+				4CFD70162271FF4000E1F298 /* LzMarqueeCell.h */,
+				4CFD70172271FF4000E1F298 /* LzMarqueeCell.m */,
+				4CFD70182271FF4000E1F298 /* LzMarqueeCell.xib */,
+			);
+			path = n;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF367DC2269A2D300CCF7FB /* LaunchScreen.storyboard in Resources */,
+				4CFD700C2271E1C400E1F298 /* noti.jpg in Resources */,
 				4CF367D92269A2D300CCF7FB /* Assets.xcassets in Resources */,
 				4CF367D72269A2D100CCF7FB /* Main.storyboard in Resources */,
+				4CFD701A2271FF4000E1F298 /* LzMarqueeCell.xib in Resources */,
 				4C105171226AB27E001F59CD /* MyController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,9 +234,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF367F22269BE0C00CCF7FB /* Person.m in Sources */,
+				4CFD70192271FF4000E1F298 /* LzMarqueeCell.m in Sources */,
 				4CF367F52269E01700CCF7FB /* LzMarqueeMV.m in Sources */,
 				4CF367D42269A2D100CCF7FB /* ViewController.m in Sources */,
 				4C105170226AB27E001F59CD /* MyController.m in Sources */,
+				4CFD70122271F8AC00E1F298 /* LzMarquee.m in Sources */,
 				4CF367DF2269A2D300CCF7FB /* main.m in Sources */,
 				4CF367E72269A30900CCF7FB /* LzMarquee2.m in Sources */,
 				4CF367F82269E4B800CCF7FB /* LzMarqueeCell2.m in Sources */,

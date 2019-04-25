@@ -78,14 +78,15 @@
 
 //点击自身
 - (void)clickOnMV{
+//    我这里就使用了代理。
 //    方式一：使用delegate 反向传递点击的model
     if (self.model && self.delegate && [self.delegate respondsToSelector:@selector(returnModel:)]) {
         [self.delegate returnModel:self.model];
     }
 //    方式二：使用block 反向传递点击的model
-    if (self.clickOnModelBlock) {
-        self.clickOnModelBlock(self.model);
-    }
+//    if (self.clickOnModelBlock) {
+//        self.clickOnModelBlock(self.model);
+//    }
 }
 
 
@@ -106,6 +107,7 @@
 - (UIImageView *)imgLogo{
     if (!_imgLogo) {
         _imgLogo = [[UIImageView alloc] init];
+        _imgLogo.image = [UIImage imageNamed:@"noti.jpg"];
     }
     return _imgLogo;
 }
