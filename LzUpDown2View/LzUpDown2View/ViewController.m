@@ -30,8 +30,8 @@
     [self addCodeMarquee1];
     [self addCodeMarquee2];
     [self addLzMarquee];
-}
 
+}
 
 - (void)addLzMarquee{
     LzMarquee * marquee = [[LzMarquee alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.lblXib1.frame), self.view.frame.size.width, 0) datas:[self getPersonsCount:12] scrollCellCount:3];
